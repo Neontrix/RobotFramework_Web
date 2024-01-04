@@ -15,6 +15,7 @@ Abrir o navegador
     # Go To    https://ibk.beta.bankeiro.com/
 
 Fechar o navegador
+    Capture Page Screenshot
     Close Browser
 
 Acessar a home page do site "${URL_AMAZON}"
@@ -37,5 +38,6 @@ Digitar o nome de produto "${NOME_PRODUTO}" no campo de pesquisa
 Clicar no botão de pesquisa
     Click Element    locator=${BOTAO_PESQUISA_PRODUTOS}
 
-Verificar o resultado da pesquisa, listando o produto pesquisado
+Verificar o resultado da pesquisa, listando o produto "${PRODUTO}"
     Element Text Should Be    locator=${RESULTADO_PESQUISA_PRODUTOS}    expected=Resultados
+    Wait Until Element Is Visible    locator=${NOME_PRODUTO}
