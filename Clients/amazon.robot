@@ -1,8 +1,13 @@
 *** Settings ***
 Resource         ../TestsCases/amazon_tests.robot
-Test Setup       Abrir o navegador
+# Abre Navegador antes de cada CT
+Test Setup       Abrir o navegador 
+# Fecha Navegador antes de cada CT
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***   
-CT 01 - Acesso ao menu "Ofertas do Dia"
-    CT 01 - Acesso ao menu "Ofertas do Dia"
+CT01
+    Caso de Teste 01 - Acesso ao menu "Ofertas do Dia"
+
+CT02
+    Caso de Teste 02 - Pesquisa de um Produto
