@@ -3,6 +3,7 @@ Documentation  Essa suíte testa o site da Amazon.com.br
 Resource       ../Pages/amazon_page.robot
 # Test Setup     Abrir o navegador
 # Test Teardown  Fechar o navegador
+# Teste
 
 *** Keywords ***
 CT 01 - Acesso ao menu "Ofertas do Dia"
