@@ -24,6 +24,9 @@ Acessar a home page do site Amazon.com.br
 Entrar no menu "Ofertas do Dia"
     Click Element    locator=${MENU_ELETRONICOS}
 
-Verificar se aparece a frase "Ofertas e Promoções"
-    Wait Until Page Contains    text=${TEXTO_HEADER_ELETRONICOS}
+Verificar se aparece a frase "${FRASE}"
+    Wait Until Page Contains    text=${FRASE}
     Wait Until Element Is Visible    locator=${HEADER_ELETRONICOS}
+
+Verificar se o título da página fica "${TITULO}"
+    Title Should Be    title=${TITULO}

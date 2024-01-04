@@ -10,10 +10,11 @@ CT 01 - Acesso ao menu "Ofertas do Dia"
     ...              e verifica a categoria computadores e informática
     [Tags]           menus  categorias
     Acessar a home page do site Amazon.com.br
+    Verificar se o título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
     Entrar no menu "Ofertas do Dia"
     Verificar se aparece a frase "Ofertas e Promoções"
-#     Verificar se o título da página fica "Eletrônicos e Tecnologia | Amazon.com.br"
-#     Verificar se aparece a categoria "Computadores e Informática"
+    Verificar se o título da página fica "Ofertas e Promoções | Amazon.com.br"
+#   Verificar se aparece a categoria "Computadores e Informática"
 
 # Caso de Teste 02 - Pesquisa de um Produto
 #     [Documentation]  Este teste verifica a busca de um produto
