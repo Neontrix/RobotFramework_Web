@@ -73,5 +73,5 @@ E um produto da linha "Xbox Series S" deve ser mostrado na página
 Quando adicionar o produto "Console Xbox Series S" no carrinho
     Adicionar produto no carrinho
 
-Então o produto "Console Xbox Series S" deve ser mostrado no carrinho
-    Element Text Should Be    locator=${ADICIONADO_CARRINHO}    expected=Adicionado ao carrinho
+Então o produto "Console Xbox Series S" deve ser mostrado no carrinho  
+   Element Text Should Be    locator=${ADICIONADO_CARRINHO}    expected=Adicionado ao carrinho
