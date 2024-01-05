@@ -18,8 +18,8 @@ Verificar o resultado da pesquisa, listando o produto "${PRODUTO}"
     Valida texto    ${RESULTADO_PESQUISA_PRODUTOS}    expected=Resultados
     Wait Until Element Is Visible    locator=${NOME_PRODUTO}
 
-# Gherkin Steps
 
+# Gherkin Steps
 Quando pesquisar pelo produto "Xbox Series S"
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa

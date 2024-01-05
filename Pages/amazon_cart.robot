@@ -11,8 +11,8 @@ Adicionar produto no carrinho
     Click Element    locator=${NOME_PRODUTO}
     Click Button    locator=${ADICIONAR_CARRINHO}
 
-# GHERKIN STEPS
 
+# GHERKIN STEPS
 Quando adicionar o produto "Console Xbox Series S" no carrinho
     Adicionar produto no carrinho
 

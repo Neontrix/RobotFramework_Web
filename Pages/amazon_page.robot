@@ -33,8 +33,8 @@ Verificar se aparece a frase "${FRASE}"
 Verificar se o título da página fica "${TITULO}"
     Title Should Be    title=${TITULO}
 
-# GHERKIN STEPS
 
+# GHERKIN STEPS
 Dado que estou na home page da Amazon.com.br
     Acessar a home page do site "Amazon.com.br"
     Verificar se o título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
