@@ -16,3 +16,6 @@ CT01
 CT02
     [Tags]           busca_produtos  lista_busca
     Caso de Teste 02 - Pesquisa de um Produto
+
+CT03
+    Caso de Teste 03 - Adicionar Produto no Carrinho

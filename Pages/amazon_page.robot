@@ -1,7 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../Resources/amazon_resources.robot
-
+Resource    ../Components/amazon_cart.robot
 
 *** Keywords ***
 Abrir o navegador
@@ -69,3 +69,14 @@ Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
 
 E um produto da linha "Xbox Series S" deve ser mostrado na página
     Verificar o resultado da pesquisa, listando o produto "Console Xbox Series S"
+
+Quando adicionar o produto "Console Xbox Series S" no carrinho
+    Adicionar produto no carrinho
+
+Então o produto "Console Xbox Series S" deve ser mostrado no carrinho
+    Wait Until Element Is Visible    locator=${ADICIONADO_CARRINHO}
+
+E existe o produto "Console Xbox Series S" no carrinho
+    Adicionar produto no carrinho
+
+# Quando remover o produto "Console Xbox Series S" do carrinho
