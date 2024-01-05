@@ -1,23 +1,25 @@
 *** Settings ***
-Library            SeleniumLibrary
-Resource           ./amazon_cart.robot
-Resource           ./amazon_page.robot
-Resource           ../Resources/amazon_resources.robot
-Resource           ../Components/input_texts.robot
+Library     SeleniumLibrary
+Resource    ./amazon_cart.robot
+Resource    ./amazon_page.robot
+Resource    ../Resources/amazon_resources.robot
+Resource    ../Components/input_texts.robot
 Resource    ../Components/click_elements.robot
+
 
 *** Keywords ***
 Digitar o nome de produto "${NOME_PRODUTO}" no campo de pesquisa
     Inserir texto    ${CAMPO_PESQUISA_PRODUTOS}    ${NOME_PRODUTO}
 
 Clicar no botão de pesquisa
-    Clicar no elemento   ${BOTAO_PESQUISA_PRODUTOS}
+    Clicar no elemento    ${BOTAO_PESQUISA_PRODUTOS}
 
 Verificar o resultado da pesquisa, listando o produto "${PRODUTO}"
-    Element Text Should Be    locator=${RESULTADO_PESQUISA_PRODUTOS}    expected=Resultados
+    Valida texto    ${RESULTADO_PESQUISA_PRODUTOS}    expected=Resultados
     Wait Until Element Is Visible    locator=${NOME_PRODUTO}
 
 # Gherkin Steps
+
 Quando pesquisar pelo produto "Xbox Series S"
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa

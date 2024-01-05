@@ -3,9 +3,10 @@ Library     SeleniumLibrary
 Resource    ../Resources/amazon_resources.robot
 Resource    ./amazon_cart.robot
 
+
 *** Keywords ***
 Abrir o navegador
-    Open Browser    browser=${BROWSER}  
+    Open Browser    browser=${BROWSER}
     Maximize Browser Window
     # ${options}    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys, selenium.webdriver
     # Call Method    ${options}    add_argument    --headless
@@ -32,8 +33,8 @@ Verificar se aparece a frase "${FRASE}"
 Verificar se o título da página fica "${TITULO}"
     Title Should Be    title=${TITULO}
 
+# GHERKIN STEPS
 
-#GHERKIN STEPS
 Dado que estou na home page da Amazon.com.br
     Acessar a home page do site "Amazon.com.br"
     Verificar se o título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
@@ -49,4 +50,3 @@ E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
 
 E verificar se o título da página fica "Ofertas e Promoções | Amazon.com.br"
     Verificar se o título da página fica "Ofertas e Promoções | Amazon.com.br"
-
