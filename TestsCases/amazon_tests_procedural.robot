@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  Essa suíte testa o site da Amazon.com.br
-Resource       ../Pages/amazon_page.robot
+Resource       ../Pages/search_product.robot
 
 
 *** Keywords ***
@@ -21,4 +21,3 @@ Caso de Teste 02 - Pesquisa de um Produto
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa
     Verificar o resultado da pesquisa, listando o produto "Console Xbox Series S"
-
