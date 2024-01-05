@@ -18,4 +18,5 @@ CT02
     Caso de Teste 02 - Pesquisa de um Produto
 
 CT03
+    [Tags]             adicionar_carrinho
     Caso de Teste 03 - Adicionar Produto no Carrinho

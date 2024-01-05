@@ -74,9 +74,4 @@ Quando adicionar o produto "Console Xbox Series S" no carrinho
     Adicionar produto no carrinho
 
 Então o produto "Console Xbox Series S" deve ser mostrado no carrinho
-    Wait Until Element Is Visible    locator=${ADICIONADO_CARRINHO}
-
-E existe o produto "Console Xbox Series S" no carrinho
-    Adicionar produto no carrinho
-
-# Quando remover o produto "Console Xbox Series S" do carrinho
+    Element Text Should Be    locator=${ADICIONADO_CARRINHO}    expected=Adicionado ao carrinho
