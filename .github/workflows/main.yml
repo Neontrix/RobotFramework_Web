@@ -1,12 +1,11 @@
-name: "🧪 Front-End tests"
-on:
-  workflow_dispatch:
+image: python:3.9
 
-jobs:
-  deploy-test:
-    runs-on: python:3.9
-    steps:
-        - name: "🧪 Front-End tests"
+
+pipelines:
+  branches:
+    master:
+      - step: 
+          name: "🧪 Front-End tests"
           script:
             - echo "Iniciando instalação das dependências para os testes"
             - pip install --upgrade pip
