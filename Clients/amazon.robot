@@ -2,7 +2,9 @@
 # Executar cenários de forma procedural
 # Resource    ../TestsCases/amazon_tests_procedural.robot
 # Executar cenários em Gherkin BDD
-Resource            ../TestsCases/amazon_tests_gherkin_bdd.robot
+Resource            ../TestsCases/amazon_cart_gherkin.robot
+Resource            ../TestsCases/amazon_home_gherkin.robot
+Resource            ../TestsCases/amazon_search_gherkin.robot
 
 # Abre Navegador antes de cada CT
 Test Setup          Abrir o navegador

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Essa suíte testa o site da Amazon.com.br
 
-Resource            ../Pages/search_product.robot
+Resource            ../Pages/amazon_search.robot
 
 
 *** Keywords ***

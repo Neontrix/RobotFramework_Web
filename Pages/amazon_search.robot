@@ -1,8 +1,8 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ./amazon_cart.robot
-Resource    ./amazon_page.robot
-Resource    ../Resources/amazon_resources.robot
+Resource    ./amazon_home.robot
+Resource    ../Resources/amazon_search_resources.robot
 Resource    ../Components/input_texts.robot
 Resource    ../Components/click_elements.robot
 

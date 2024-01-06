@@ -1,7 +1,9 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../Pages/search_product.robot
+Resource    ../Pages/amazon_search.robot
 Resource    ../Components/text_validator.robot
+Resource    ../Resources/amazon_cart_resources.robot
+Resource    ../Resources/amazon_search_resources.robot
 
 
 *** Keywords ***
