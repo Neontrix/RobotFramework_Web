@@ -9,7 +9,9 @@ jobs:
       name: test
     steps:
       - name: "🧪 Front-End tests"
-        run:  
+        with:
+          python-version: 3.9
+          script:  
               echo "Iniciando instalação das dependências para os testes"
               pip install --upgrade pip
               pip install -r requirements.txt
