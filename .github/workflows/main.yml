@@ -8,7 +8,7 @@ jobs:
     environment:
       name: test
     steps:
-      - name: "🧪 Front-End tests"
+      - name: "Preparação de Ambiente"
         uses: actions/checkout@v3
         with:
           python-version: 3.9
