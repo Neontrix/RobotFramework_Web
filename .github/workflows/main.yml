@@ -9,19 +9,21 @@ jobs:
       name: test
     steps:
       - name: "🧪 Front-End tests"
+        uses: actions/checkout@v3
         with:
           python-version: 3.9
-          run:  
-              echo "Iniciando instalação das dependências para os testes"
-              pip install --upgrade pip
-              pip install -r requirements.txt
-              echo "Dependências instaladas!"
-              echo "Iniciando instalação do navegador"
-              apt update -y
-              apt install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
-              wget -O ~/FirefoxSetup.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64"
-              tar xjf ~/FirefoxSetup.tar.bz2 -C /opt/
-              apt-get update && apt-get install -y wget bzip2 libxtst6 libgtk-3-0 libx11-xcb-dev libdbus-glib-1-2 libxt6 libpci-dev && rm -rf /var/lib/apt/lists/*
-              echo "Navegador instalado!"
-              echo "Iniciando testes e2e com robot"
-              robot -d ./Results/Admin ./Clients/amazon.robot
+      - name: "🧪 Front-End tests"
+        run: |
+          echo "Iniciando instalação das dependências para os testes"
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          echo "Dependências instaladas!"
+          echo "Iniciando instalação do navegador"
+          apt update -y
+          apt install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
+          wget -O ~/FirefoxSetup.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64"
+          tar xjf ~/FirefoxSetup.tar.bz2 -C /opt/
+          apt-get update && apt-get install -y wget bzip2 libxtst6 libgtk-3-0 libx11-xcb-dev libdbus-glib-1-2 libxt6 libpci-dev && rm -rf /var/lib/apt/lists/*
+          echo "Navegador instalado!"
+          echo "Iniciando testes e2e com robot"
+          robot -d ./Results/Admin ./Clients/amazon.robot
